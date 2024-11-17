@@ -25,7 +25,7 @@ After that, the folders will be prepared and once it is finished you will see a 
   <img src="/img/command3.png" />
 </p>  
 
-### 2. Spinal Cord Segmentation  
+### 2. Spinal Cord Vertebral Labeling  
 
 By typing this option, the **Enigma-SC** will run automatically the `sct_deepseg` function of the [Spinal Cord Toolbox](https://spinalcordtoolbox.com/user_section/command-line.html) over each image you selected on the previous step. 
 
