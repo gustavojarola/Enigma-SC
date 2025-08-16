@@ -1,7 +1,7 @@
 '''
 BSD 3-Clause License
 
-Copyright (c) 2023, art2mri
+Copyright (c) 2023, gustavomjarola
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -289,8 +289,8 @@ def modal_docker():
 		if 'vertebral_labeling' in result:
 			os.system('docker rm vertebral_labeling')
 						
-	loww1='docker run -itd --ipc=host --name vertebral_labeling art2mri/vertebral_labeling:3.0'
-	loww2='docker run -itd --ipc=host --name vertebral_labeling art2mri/vertebral_labeling:3.0'
+	loww1='docker run -itd --ipc=host --name vertebral_labeling gustavomjarola/vertebral_labeling:3.0'
+	loww2='docker run -itd --ipc=host --name vertebral_labeling gustavomjarola/vertebral_labeling:3.0'
 	
 	try:
 		subprocess.run(loww1, shell=True, check=True, stderr=subprocess.DEVNULL)
@@ -624,11 +624,11 @@ def docker():
 			os.system('docker rm vertebral_labeling')																	
 	try:
     		subprocess.run('nvidia-smi', check=True)
-    		docker_command = 'docker run -itd --gpus all --ipc=host --name vertebral_labeling art2mri/vertebral_labeling:3.0'
+    		docker_command = 'docker run -itd --gpus all --ipc=host --name vertebral_labeling gustavomjarola/vertebral_labeling:3.0'
 	except FileNotFoundError as gpu_error:
-    		docker_command = 'docker run -itd --ipc=host --name vertebral_labeling art2mri/vertebral_labeling:3.0'
+    		docker_command = 'docker run -itd --ipc=host --name vertebral_labeling gustavomjarola/vertebral_labeling:3.0'
 	except subprocess.CalledProcessError as gpu_error:
-    		docker_command = 'docker run -itd --ipc=host --name vertebral_labeling art2mri/vertebral_labeling:3.0'	
+    		docker_command = 'docker run -itd --ipc=host --name vertebral_labeling gustavomjarola/vertebral_labeling:3.0'	
 	try:
     		subprocess.run(docker_command, check=True)
 	except FileNotFoundError as e:
@@ -1086,11 +1086,11 @@ def reg_aut_docker():
 			os.system('docker rm vertebral_labeling')																	
 	try:
     		subprocess.run('nvidia-smi', check=True)
-    		docker_command = 'docker run -itd --gpus all --ipc=host --name vertebral_labeling art2mri/vertebral_labeling:3.0'
+    		docker_command = 'docker run -itd --gpus all --ipc=host --name vertebral_labeling gustavomjarola/vertebral_labeling:3.0'
 	except FileNotFoundError as gpu_error:
-    		docker_command = 'docker run -itd --ipc=host --name vertebral_labeling art2mri/vertebral_labeling:3.0'
+    		docker_command = 'docker run -itd --ipc=host --name vertebral_labeling gustavomjarola/vertebral_labeling:3.0'
 	except subprocess.CalledProcessError as gpu_error:
-    		docker_command = 'docker run -itd --ipc=host --name vertebral_labeling art2mri/vertebral_labeling:3.0'	
+    		docker_command = 'docker run -itd --ipc=host --name vertebral_labeling gustavomjarola/vertebral_labeling:3.0'	
 	try:
     		subprocess.run(docker_command, check=True)
 	except FileNotFoundError as e:
@@ -1674,11 +1674,11 @@ def ext_docker():
 			os.system('docker rm vertebral_labeling')																	
 	try:
     		subprocess.run('nvidia-smi', check=True)
-    		docker_command = 'docker run -itd --gpus all --ipc=host --name vertebral_labeling art2mri/vertebral_labeling:3.0'
+    		docker_command = 'docker run -itd --gpus all --ipc=host --name vertebral_labeling gustavomjarola/vertebral_labeling:3.0'
 	except FileNotFoundError as gpu_error:
-    		docker_command = 'docker run -itd --ipc=host --name vertebral_labeling art2mri/vertebral_labeling:3.0'
+    		docker_command = 'docker run -itd --ipc=host --name vertebral_labeling gustavomjarola/vertebral_labeling:3.0'
 	except subprocess.CalledProcessError as gpu_error:
-    		docker_command = 'docker run -itd --ipc=host --name vertebral_labeling art2mri/vertebral_labeling:3.0'	
+    		docker_command = 'docker run -itd --ipc=host --name vertebral_labeling gustavomjarola/vertebral_labeling:3.0'	
 	try:
     		subprocess.run(docker_command, check=True)
 	except FileNotFoundError as e:
@@ -2362,7 +2362,7 @@ def container_ext(choice):
 #############################
 
 def open_tutorial():
-    url = "https://github.com/art2mri/Enigma-SC" 
+    url = "https://github.com/gustavomjarola/Enigma-SC" 
     webbrowser.open_new(url)
     
 #############################	
@@ -2443,3 +2443,4 @@ button_frame.grid_columnconfigure(0, weight=1)
 additional_button_frame.grid_columnconfigure(0, weight=1)
 
 root.mainloop()
+
